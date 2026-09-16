@@ -65,8 +65,10 @@ I extracted an initial sample of n=10 companies to run the entire pipeline local
 •	Results: 
 The pipeline extracted 3 codes that passed the Modulus 97 validation.
 
-•	HMRC Confirmation: Of these 3 mathematically valid codes, 2 were officially confirmed by HMRC as belonging to the companies being searched for, and 1 was refuted (a mathematically valid number, but one that belonged to another entity or was inactive).
-•	False-Positive Rate: Low statistical power (n=3): with only 3 mathematically valid candidates in the sample, an FPR of 33.3% is a very fragile estimate, with such a small sample, adding or removing just one company would change the figure by tens of percentage points. The sample demonstrates the concept (valid checksum ≠ correct entity), but does not support a reliable error rate.
+•	HMRC Confirmation: Of these 3 mathematically valid codes, 2 were officially confirmed by HMRC as belonging to the companies being searched for, and 1 was refuted (a mathematically valid number, but one that belonged to another entity or was inactive);
+
+•	False-Positive Rate: Low statistical power (n=3): with only 3 mathematically valid candidates in the sample, an FPR of 33.3% is a very fragile estimate, with such a small sample, adding or removing just one company would change the figure by tens of percentage points. The sample demonstrates the concept (valid checksum ≠ correct entity), but does not support a reliable error rate;
+
 •	Match Rate / Coverage: Of all 10 companies in the sample, the script was able to extract and confirm through HMRC a correct VAT number for 2 companies resulting in a coverage rate of 20% (2/10). This figure is distinct from the false positive rate: FPR measures how often a candidate that passes the local checksum is incorrect, while coverage measures what percentage of the target population (the companies being searched for) the pipeline successfully covers from start to finish. Low coverage (20%) indicates that, although the accuracy for the candidates found is reasonable, the main bottleneck in the current process is in the extraction phase (7 out of 10 companies did not produce any valid candidates in the first phase), not in the validation phase.
 
 •	!! Limits of this variant:
