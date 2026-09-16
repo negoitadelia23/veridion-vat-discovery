@@ -4,6 +4,8 @@ README.md - contains the written assignment
 
 master/vat_id_test.R - the R script containing the Proof of Concept
 
+## Assignment
+
 Part 1: Research. What did you learn that wasn’t obvious at the start? Which sources exist, which are usable, what did you rule out and why? Show the trail, not only the conclusion. For the paths that mattered I want the evidence: what you ran, what came back, the number you got. A claim I can trace to something you actually did counts for more than one I cannot. Write up the dead ends too, and be specific: for each one that mattered, name the source, what you expected, and the exact reason it failed. “Scraping is unreliable” is not a dead end; “this source returns VAT numbers but only for a small share of my sample, and here is the evidence” is. The search matters as much as what you found.
 To begin with, I accessed the official Companies House database (Basic Company Data). I downloaded the “Part 1 of 7” file from the bulk dataset to see what data was available. Next, I checked the database schema, available at: https://resources.companieshouse.gov.uk/toolsToHelp/pdf/freeDataProductDataset.pdf. Here, the first problem arises (which is also mentioned in the project requirements): there is no column for the VAT Registration Number (or even a “Website URL”). Thus, I cannot use the dataset as a direct source for VAT information.
 I realized that the dataset can be used as:
