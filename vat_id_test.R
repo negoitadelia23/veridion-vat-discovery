@@ -77,8 +77,9 @@ final_vat_results
 
 library(jsonlite)
 #testing the hmrc api 
-client_id <- "NJCv2epCCzy8TWmqVd1k8O5vHEXi"
-client_secret <- "27dd7668-42ce-4315-b1c8-ec2473eede92"
+client_id <- "id"
+client_secret <- "secret"
+#for security measures, I didn't put the actual id and secret
 #get token function
 get_hmrc_token <- function(id, secret) {
   token_url <- "https://test-api.service.hmrc.gov.uk/oauth/token"
@@ -141,3 +142,18 @@ hmrc_verification_results <- do.call(rbind, lapply(valid_vats, function(v) {
 }))
 hmrc_verification_results
 #the sandbox environment doesn't let me have access to actual company data
+
+
+#!!! SCALABILITY TEST !!!
+#as documented in the README, I tested scalability using a different dataset
+# increased the sample size
+# slice_sample(n=35) %>%
+# pull(Name)
+#in the case of that dataset, the "Supplier.Name" variable is called Name 
+#for(company in scalability_sample){
+                #same http req logic as above 
+      #added a human-like delay to bypass rate-limiting
+      #Sys.sleep(sample(2:4,1))
+#}                                          
+
+#the result from that dataset and sample was a 100% failure rate, because of the 403 Forbidden error
